@@ -2,11 +2,13 @@
 
 A wrapper for John Resig's [Pretty Date function](http://ejohn.org/blog/javascript-pretty-date/).
 
-# install
+![timeago](http://i.imgur.com/W1Zwy.png)
+
+#install
 
     npm install timeago
 
-# usage
+#usage
 
     var timeago = require('timeago');
 
