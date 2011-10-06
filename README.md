@@ -15,3 +15,11 @@ A wrapper for John Resig's [Pretty Date function](http://ejohn.org/blog/javascri
     var pretty = timeago(+new Date());
 
     console.log(pretty); // just now
+
+You can also use it in Express app templates:
+
+    var app = express.createServer();
+
+    app.helpers({
+      timeago: require('timeago')
+    });
