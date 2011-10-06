@@ -4,11 +4,11 @@
   "description": "A wrapper for John Resig's Pretty Date function",
   "version": "0.0.1",
   "repository": {
-    "url": ""
+    "url": "https://github.com/ecto/node-timeago"
   },
   "main": "index.js",
   "engines": {
-    "node": "~v0.4.10"
+    "node": "*"
   },
   "dependencies": {},
   "devDependencies": {}
