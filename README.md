@@ -12,4 +12,4 @@ A wrapper for John Resig's [Pretty Date function](http://ejohn.org/blog/javascri
 
     var pretty = timeago(+new Date());
 
-    coonsole.log(pretty);
+    console.log(pretty); // just now
