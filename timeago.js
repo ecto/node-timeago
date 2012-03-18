@@ -8,7 +8,7 @@
  * http://ejohn.org/blog/javascript-pretty-date/
  */
 
-umodule.exports = function (time) {
+module.exports = function (time) {
   var cur = +new Date() / 1000;
   var date = +new Date(time);
   var ms = date.toString().length > 10;
@@ -18,8 +18,6 @@ umodule.exports = function (time) {
 
   var diff = Math.floor(cur - date);
   var day_diff = Math.floor(diff / day);
-
-  console.log([cur, date, diff, day_diff]);
 
   if (isNaN(day_diff) || day_diff < 0) return;
   return day_diff == 0 && (
