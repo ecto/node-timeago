@@ -5,7 +5,7 @@
   ],
   "name": "timeago",
   "description": "A wrapper for John Resig's Pretty Date function",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "repository": {
     "url": "https://github.com/ecto/node-timeago"
   },
