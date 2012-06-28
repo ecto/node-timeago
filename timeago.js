@@ -17,7 +17,7 @@
  *
  * Copyright (c) 2008-2011, Ryan McGeary (ryanonjavascript -[at]- mcgeary [*dot*] org)
  */
-module.exports = function(timestamp) {
+module.exports = function (timestamp) {
   if (timestamp instanceof Date) {
     return inWords(timestamp);
   } else if (typeof timestamp === "string") {
@@ -26,7 +26,6 @@ module.exports = function(timestamp) {
 };
 
 var settings = {
-  refreshMillis: 60000,
   allowFuture: false,
   strings: {
     prefixAgo: null,
@@ -46,14 +45,13 @@ var settings = {
     years: "%d years",
     numbers: []
   }
-}
+};
 
 var $l = settings.strings;
 
-module.exports.settings = settings
+module.exports.settings = settings;
 
 $l.inWords = function (distanceMillis) {
-  
   var prefix = $l.prefixAgo;
   var suffix = $l.suffixAgo;
   if (settings.allowFuture) {
@@ -69,7 +67,7 @@ $l.inWords = function (distanceMillis) {
   var days = hours / 24;
   var years = days / 365;
 
-  function substitute(stringOrFunction, number) {
+  function substitute (stringOrFunction, number) {
     var string = typeof stringOrFunction === 'function' ? stringOrFunction(number, distanceMillis) : stringOrFunction;
     var value = ($l.numbers && $l.numbers[number]) || number;
     return string.replace(/%d/i, value);
@@ -88,10 +86,11 @@ $l.inWords = function (distanceMillis) {
     substitute($l.years, Math.floor(years));
 
   return [prefix, words, suffix].join(" ").toString().trim();
-}
+};
+
 function parse (iso8601) {
-  if (!iso8601) return
-  var s = iso8601.trim()
+  if (!iso8601) return;
+  var s = iso8601.trim();
   s = s.replace(/\.\d\d\d+/,""); // remove milliseconds
   s = s.replace(/-/,"/").replace(/-/,"/");
   s = s.replace(/T/," ").replace(/Z/," UTC");
@@ -99,13 +98,12 @@ function parse (iso8601) {
   return new Date(s);
 }
 
+$l.parse = parse;
 
-$l.parse = parse
-
-function inWords(date) {
+function inWords (date) {
   return $l.inWords(distance(date));
 }
 
-function distance(date) {
+function distance (date) {
   return (new Date().getTime() - date.getTime());
 }
