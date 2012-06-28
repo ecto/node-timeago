@@ -1,6 +1,6 @@
 # timeago
 
-A wrapper for John Resig's [Pretty Date function](http://ejohn.org/blog/javascript-pretty-date/).
+A wrapper for Ryan McGeary's [jQuery plugin](http://timeago.yarp.com/).
 
 ![timeago](http://i.imgur.com/W1Zwy.png)
 
@@ -10,16 +10,24 @@ A wrapper for John Resig's [Pretty Date function](http://ejohn.org/blog/javascri
 
 #usage
 
-    var timeago = require('timeago');
+````javascript
+var timeago = require('timeago');
 
-    var pretty = timeago(+new Date());
+var pretty = timeago(+new Date());
 
-    console.log(pretty); // just now
+console.log(pretty); // just now
+````
 
 You can also use it in Express app templates:
 
-    var app = express.createServer();
+````javascript
+var app = express.createServer();
 
-    app.helpers({
-      timeago: require('timeago')
-    });
+app.helpers({
+  timeago: require('timeago')
+});
+````
+
+````ejs
+<div class="timeago"><%- timeago(widget.created) %></div>
+````
