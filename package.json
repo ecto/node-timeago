@@ -1,5 +1,8 @@
 {
   "author": "Cam Pedersen <diffference@gmail.com> (http://campedersen.com)",
+  "contributors": [
+    "Mikeal Rogers <mikeal.rogers@gmail.com> (http://www.mikealrogers.com)"
+  ],
   "name": "timeago",
   "description": "A wrapper for John Resig's Pretty Date function",
   "version": "0.0.3",
