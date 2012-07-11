@@ -4,7 +4,7 @@
     "Mikeal Rogers <mikeal.rogers@gmail.com> (http://www.mikealrogers.com)"
   ],
   "name": "timeago",
-  "description": "A wrapper for John Resig's Pretty Date function",
+  "description": "A wrapper for Ryan McGeary's Pretty Date function",
   "version": "0.1.0",
   "repository": {
     "url": "https://github.com/ecto/node-timeago"
