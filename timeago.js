@@ -22,6 +22,8 @@ module.exports = function (timestamp) {
     return inWords(timestamp);
   } else if (typeof timestamp === "string") {
     return inWords(parse(timestamp));
+  } else if (typeof timestamp === "number") {
+    return inWords(new Date(timestamp))
   }
 };
 
